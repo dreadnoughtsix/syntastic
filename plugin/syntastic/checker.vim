@@ -107,7 +107,7 @@ function! g:SyntasticChecker.getLocListRaw() abort " {{{2
         endif
         if status < 0
             call syntastic#log#error('checker ' . name . ': checks disabled for security reasons; ' .
-                \ 'set g:syntastic_' . self._enable . ' to 1 to override')
+                \ 'let g:syntastic_' . self._enable . ' to 1 to override')
         endif
         if status <= 0
             call syntastic#log#debug(g:_SYNTASTIC_DEBUG_TRACE, 'getLocList: checker ' . name . ' enabled but not forced')
